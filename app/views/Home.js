@@ -16,5 +16,10 @@ export class Home extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1 },
+  container: {
+    flex: 1,
+    // flexDirection: "column-reverse",
+    // justifyContent: 'center', would have to change child components to fixed sizes
+    // alignItems: "center",
+  },
 });

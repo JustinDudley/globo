@@ -24,9 +24,6 @@ export class Header extends React.Component {
     );
   }
 }
-
-//verbage: "a const named styles, which will hold our style object"
-// also: "our Stylesheet create method", referring to Stylesheet.create({})
 const styles = StyleSheet.create({
   headStyle: {
     marginTop: 25, // my own addition
@@ -41,6 +38,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
 });
+
+//verbage: "a const named styles, which will hold our style object"
+// also: "our Stylesheet create method", referring to Stylesheet.create({})
 
 // this.props.message: Static.   => PROPS
 // user:  eventually, this will be dynamic:  => STATE

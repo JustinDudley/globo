@@ -24,13 +24,15 @@ export class Header extends React.Component {
     );
   }
 }
+
 const styles = StyleSheet.create({
   headStyle: {
     marginTop: 25, // my own addition
     paddingTop: 30,
-    paddingBottom: 10,
     paddingRight: 10,
     backgroundColor: "#35605a",
+    flex: 1,
+    // width: 100,
   },
   headText: {
     textAlign: "right",

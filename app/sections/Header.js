@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View /*, Platform */ } from "react-native"; // Platform module used in commented-out code below
 
 export class Header extends React.Component {
   constructor(props) {
@@ -27,12 +27,22 @@ export class Header extends React.Component {
 
 const styles = StyleSheet.create({
   headStyle: {
+    // width: 100,
+    flex: 1,
     marginTop: 25, // my own addition
     paddingTop: 30,
     paddingRight: 10,
     backgroundColor: "#35605a",
-    flex: 1,
-    // width: 100,
+    //
+    // 2 ways to be platform-specific:
+    // backgroundColor: Platform.OS === "android" ? "#31e981" : "#35605a",
+    // - OR -
+    // ...Platform.select({
+    //   ios: { backgroundColor: "red" },
+    //   android: { backgroundColor: "purple" },
+    // }),
+    //
+    // Can also select WHOLE COMPONENTS to use based on Platform.select()
   },
   headText: {
     textAlign: "right",

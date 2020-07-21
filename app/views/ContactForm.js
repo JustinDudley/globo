@@ -19,18 +19,22 @@ export class ContactForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      msg: "Enter Message",
-      name: "Enter Name",
-      email: "Enter your email",
+      name: "",
+      msg: "",
+      email: "",
     };
   }
 
+  NAME_PLACEHOLDER = "Enter Name";
+  MESSAGE_PLACEHOLDER = "Enter Message";
+  EMAIL_PLACEHOLDER = "Enter Email";
+
   clearFields = () => {
-    this.setState({ msg: "", name: "", email: "" });
+    this.setState({ name: "", msg: "", email: "" });
   };
 
   sendMessage = () => {
-    Alert.alert(this.state.name, this.state.msg);
+    Alert.alert("Name: " + this.state.name, `Message: ${this.state.msg}`);
     this.props.navigation.goBack();
   };
 
@@ -47,6 +51,7 @@ export class ContactForm extends React.Component {
           // onChange --this prop can be used to call a function
           onChangeText={(text) => this.setState({ name: text })}
           value={this.state.name}
+          placeholder={this.NAME_PLACEHOLDER}
         />
         <TextInput
           style={styles.multiInput}
@@ -54,12 +59,14 @@ export class ContactForm extends React.Component {
           value={this.state.msg}
           multiline={true} // allows for longer input
           numberOfLines={4} // only if multiline=true
+          placeholder={this.MESSAGE_PLACEHOLDER}
           // onKeyPress is another prop we could use, to deal with certain user key presses such as "enter"
         />
         <TextInput
           style={styles.inputs}
           onChangeText={(text) => this.setState({ email: text })}
           value={this.state.email}
+          placeholder={this.EMAIL_PLACEHOLDER}
         />
 
         <TouchableHighlight onPress={this.sendMessage} underlayColor="#31e981">
@@ -77,7 +84,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    paddingBottom: "45%", // because keyboard will cover much of screen
+    paddingBottom: "5%",
+    // paddingBottom: "45%", // this was supposed to HELP with the keyboard, but instead it broke it !!
   },
   heading: {
     flex: 1,
@@ -86,15 +94,18 @@ const styles = StyleSheet.create({
   inputs: {
     flex: 1,
     width: "80%",
-    padding: 10,
+    // padding: 10,
+    padding: 3,
   },
   multiInput: {
     flex: 2,
     width: "90%",
-    paddingTop: 20,
+    // paddingTop: 20,
+    paddingTop: 5,
   },
   buttons: {
-    marginTop: 15,
+    // marginTop: 15,
+    marginTop: 6,
     fontSize: 16,
   },
 });

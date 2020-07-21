@@ -1,5 +1,13 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+// import { StackNavigator } from 'react-navigation'; // Reggie
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableHighlight,
+  Alert,
+} from "react-native";
+
 import { Header } from "../sections/Header";
 
 export class Contact extends React.Component {

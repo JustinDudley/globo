@@ -4,7 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import { Home } from "./app/views/Home.js";
-import { Contact } from "./app/views/Contact";
+import { ContactForm } from "./app/views/ContactForm";
 
 const Stack = createStackNavigator(); // returns an object containing 2 properties: Screen and Navigator
 
@@ -18,7 +18,7 @@ export default class App extends React.Component {
             component={Home}
             options={{ headerShown: false }}
           />
-          <Stack.Screen name="ContactRT" component={Contact} />
+          <Stack.Screen name="ContactFormRT" component={ContactForm} />
         </Stack.Navigator>
       </NavigationContainer>
     );

@@ -6,12 +6,11 @@ import {
   TouchableHighlight,
   Alert,
 } from "react-native";
-// import { StackNavigator } from 'react-navigation'; // Reggie
 
 import { Header } from "../sections/Header";
 import { TextInput } from "react-native-gesture-handler";
 
-export class Contact extends React.Component {
+export class ContactForm extends React.Component {
   // not sure if this Reggie block is applicable:
   // static navigationOptions = {
   //   header: null,
@@ -42,6 +41,7 @@ export class Contact extends React.Component {
       <View style={styles.container}>
         <Header message="Press to Login" />
         <Text style={styles.heading}>Contact Us</Text>
+
         <TextInput
           style={styles.inputs}
           // onChange --this prop can be used to call a function
@@ -61,6 +61,7 @@ export class Contact extends React.Component {
           onChangeText={(text) => this.setState({ email: text })}
           value={this.state.email}
         />
+
         <TouchableHighlight onPress={this.sendMessage} underlayColor="#31e981">
           <Text style={styles.buttons}>Send Message</Text>
         </TouchableHighlight>

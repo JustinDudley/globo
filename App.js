@@ -1,14 +1,26 @@
+import "react-native-gesture-handler"; // placed at very top, per React Native docs
 import React from "react";
 import { Home } from "./app/views/Home.js";
-import { render } from "react-dom";
+import { Contact } from "./app/views/Contact";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 
-export default function App() {
-  return <Home />;
+const Stack = createStackNavigator(); // returns an object containing 2 properties: Screen and Navigator
+
+export default class App extends React.Component {
+  render() {
+    return (
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="HomeRT">
+          <Stack.Screen name="HomeRT" component={Home} />
+          <Stack.Screen name="ContactRT" component={Contact} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    );
+  }
 }
 
 // -- or --
-// export default class App extends React.Component {
-//   render() {
-//     return <Home />;
-//   }
+// export default function App() {
+//   return <Home />;
 // }

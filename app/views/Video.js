@@ -34,6 +34,7 @@ export class Video extends React.Component {
   }
 
   render() {
+    const { navigate } = this.props.navigation;
     return (
       <View>
         {this.state.listIsLoaded && (
@@ -43,6 +44,7 @@ export class Video extends React.Component {
               data={this.state.videoList}
               renderItem={({ item }) => (
                 <YouTubeItem
+                  navigate={navigate}
                   id={item.id.videoId}
                   title={item.snippet.title}
                   imageSrc={item.snippet.thumbnails.high.url}
@@ -61,10 +63,10 @@ export class Video extends React.Component {
   }
 }
 
-// normally, this would get its own file...
 export class YouTubeItem extends React.Component {
   onPress = () => {
-    console.log("The id of this video_? is: ", this.props.id);
+    // console.log("The id of this video_? is: ", this.props.id);
+    this.props.navigate("VideoDetailRT", { ytubeId: this.props.id });
   };
 
   render() {

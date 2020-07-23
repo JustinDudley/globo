@@ -65,7 +65,8 @@ export class Video extends React.Component {
 
 export class YouTubeItem extends React.Component {
   onPress = () => {
-    // console.log("The id of this video_? is: ", this.props.id);
+    // console.log(this.props.id);
+    // check out how I can pass something from one component to another using .navigate!
     this.props.navigate("VideoDetailRT", { ytubeId: this.props.id });
   };
 

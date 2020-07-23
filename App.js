@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import { Home } from "./app/views/Home.js";
 import { ContactForm } from "./app/views/ContactForm";
+import { Video } from "./app/views/Video.js";
 
 const Stack = createStackNavigator(); // returns an object containing 2 properties: Screen and Navigator
 
@@ -19,6 +20,7 @@ export default class App extends React.Component {
             options={{ headerShown: false }}
           />
           <Stack.Screen name="ContactFormRT" component={ContactForm} />
+          <Stack.Screen name="LessonsRT" component={Video} />
         </Stack.Navigator>
       </NavigationContainer>
     );

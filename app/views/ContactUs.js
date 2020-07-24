@@ -10,7 +10,7 @@ import {
 import { Header } from "../sections/Header";
 import { TextInput } from "react-native-gesture-handler";
 
-export class ContactForm extends React.Component {
+export class ContactUs extends React.Component {
   // not sure if this Reggie block is applicable:
   // static navigationOptions = {
   //   header: null,

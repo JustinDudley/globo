@@ -67,7 +67,7 @@ export class YouTubeItem extends React.Component {
   buttonHandler = () => {
     // console.log(this.props.id);
     // check out how I can pass something from one component to another using .navigate!
-    this.props.navigate("video detail route", { ytubeId: this.props.id });
+    this.props.navigate("show video", { ytubeId: this.props.id });
   };
 
   render() {

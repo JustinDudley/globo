@@ -21,7 +21,7 @@ export class Registration extends React.Component {
 
   cancelRegistration = () => {
     Alert.alert("Registration cancelled");
-    this.props.navigation.navigate("HomeRT");
+    this.props.navigation.navigate("home");
   };
 
   registerAccount = () => {
@@ -40,7 +40,7 @@ export class Registration extends React.Component {
             this.state.password,
             (err, result) => {
               Alert.alert(`account created for ${this.state.username}`);
-              this.props.navigation.navigate("HomeRT");
+              this.props.navigation.navigate("home");
             }
           );
         }

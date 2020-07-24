@@ -18,7 +18,7 @@ export class Menu extends React.Component {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.buttonStyles}
-            onPress={this.buttonHandler}
+            onPress={() => this.props.navigate("registration")}
           >
             <Text style={styles.buttonText}>REGISTER</Text>
           </TouchableOpacity>

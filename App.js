@@ -7,6 +7,7 @@ import { Home } from "./app/views/Home.js";
 import { ContactForm } from "./app/views/ContactForm";
 import { Video } from "./app/views/Video.js";
 import { VideoDetail } from "./app/views/VideoDetail";
+import { Registration } from "./app/views/Registration.js";
 
 const Stack = createStackNavigator(); // returns an object containing 2 properties: Screen and Navigator
 
@@ -23,6 +24,7 @@ export default class App extends React.Component {
           <Stack.Screen name="ContactFormRT" component={ContactForm} />
           <Stack.Screen name="LessonsRT" component={Video} />
           <Stack.Screen name="video detail route" component={VideoDetail} />
+          <Stack.Screen name="registration" component={Registration} />
         </Stack.Navigator>
       </NavigationContainer>
     );

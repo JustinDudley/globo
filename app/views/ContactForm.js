@@ -52,6 +52,7 @@ export class ContactForm extends React.Component {
           onChangeText={(text) => this.setState({ name: text })}
           value={this.state.name}
           placeholder={this.NAME_PLACEHOLDER}
+          placeholderTextColor={"#666666"}
         />
         <TextInput
           style={styles.multiInput}
@@ -60,6 +61,7 @@ export class ContactForm extends React.Component {
           multiline={true} // allows for longer input
           numberOfLines={4} // only if multiline=true
           placeholder={this.MESSAGE_PLACEHOLDER}
+          placeholderTextColor={"#666666"}
           // onKeyPress is another prop we could use, to deal with certain user key presses such as "enter"
         />
         <TextInput
@@ -67,6 +69,7 @@ export class ContactForm extends React.Component {
           onChangeText={(text) => this.setState({ email: text })}
           value={this.state.email}
           placeholder={this.EMAIL_PLACEHOLDER}
+          placeholderTextColor={"#666666"}
         />
 
         <TouchableHighlight onPress={this.sendMessage} underlayColor="#31e981">
@@ -96,12 +99,18 @@ const styles = StyleSheet.create({
     width: "80%",
     // padding: 10,
     padding: 3,
+    backgroundColor: "#cccccc",
+    borderColor: "black",
+    borderWidth: 1,
   },
   multiInput: {
     flex: 2,
     width: "90%",
     // paddingTop: 20,
     paddingTop: 5,
+    backgroundColor: "#cccccc",
+    borderColor: "#333333",
+    borderWidth: 1,
   },
   buttons: {
     // marginTop: 15,

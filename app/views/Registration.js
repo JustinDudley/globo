@@ -98,23 +98,22 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    paddingBottom: "45%",
-    paddingTop: "10%",
+    paddingBottom: "3%",
   },
   heading: {
     flex: 1,
     width: "80%",
-    padding: 10,
+    paddingTop: 10,
   },
   inputs: {
     flex: 1,
     width: "80%",
-    padding: 10,
+    padding: 5,
     height: "13%",
-    // color: "red",
     borderColor: "black",
     borderWidth: 1,
     backgroundColor: "#999999",
+    borderRadius: 8,
   },
   buttons: {
     marginTop: 15,

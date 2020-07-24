@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     paddingBottom: "5%",
-    // paddingBottom: "45%", // this was supposed to HELP with the keyboard, but instead it broke it !!
+    // paddingBottom: "45%", // this was supposed to HELP with the keyboard, but instead it broke it
   },
   heading: {
     flex: 1,

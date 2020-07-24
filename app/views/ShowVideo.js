@@ -1,7 +1,7 @@
 import React from "react";
 import { WebView } from "react-native-webview";
 
-export class VideoDetail extends React.Component {
+export class ShowVideo extends React.Component {
   render() {
     let tubeId = this.props.route.params?.ytubeId ?? "NO VIDEO";
     let tubeUrl = `https://www.youtube.com/embed/${tubeId}`;

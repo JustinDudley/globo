@@ -7,12 +7,7 @@ import {
   Image,
 } from "react-native";
 
-export class Video extends React.Component {
-  // static navigationOptions = {
-  //     header: null
-  // };
-  // what was that tricky navigation thing I needed to include in my other classes?
-
+export class Lessons extends React.Component {
   constructor(props) {
     super(props);
     this.state = { listIsLoaded: false }; // formerly listLoaded, okay to change?

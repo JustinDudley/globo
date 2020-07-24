@@ -22,7 +22,7 @@ export default class App extends React.Component {
           />
           <Stack.Screen name="ContactFormRT" component={ContactForm} />
           <Stack.Screen name="LessonsRT" component={Video} />
-          <Stack.Screen name="VideoDetailRT" component={VideoDetail} />
+          <Stack.Screen name="video detail route" component={VideoDetail} />
         </Stack.Navigator>
       </NavigationContainer>
     );

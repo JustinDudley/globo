@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View, TouchableOpacity, Text, Alert } from "react-native";
 
 export class Menu extends React.Component {
-  onPress = () => {
+  buttonHandler = () => {
     Alert.alert("You pressed the button!");
   };
 
@@ -16,13 +16,19 @@ export class Menu extends React.Component {
           >
             <Text style={styles.buttonText}>LESSONS</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+          <TouchableOpacity
+            style={styles.buttonStyles}
+            onPress={this.buttonHandler}
+          >
             <Text style={styles.buttonText}>REGISTER</Text>
           </TouchableOpacity>
         </View>
 
         <View style={styles.buttonRow}>
-          <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+          <TouchableOpacity
+            style={styles.buttonStyles}
+            onPress={this.buttonHandler}
+          >
             <Text style={styles.buttonText}>BLOG</Text>
           </TouchableOpacity>
           <TouchableOpacity
@@ -34,10 +40,16 @@ export class Menu extends React.Component {
         </View>
 
         <View style={styles.buttonRow}>
-          <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+          <TouchableOpacity
+            style={styles.buttonStyles}
+            onPress={this.buttonHandler}
+          >
             <Text style={styles.buttonText}>QUIZ</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+          <TouchableOpacity
+            style={styles.buttonStyles}
+            onPress={this.buttonHandler}
+          >
             <Text style={styles.buttonText}>ABOUT</Text>
           </TouchableOpacity>
         </View>

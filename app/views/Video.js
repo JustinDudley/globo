@@ -64,7 +64,7 @@ export class Video extends React.Component {
 }
 
 export class YouTubeItem extends React.Component {
-  onPress = () => {
+  buttonHandler = () => {
     // console.log(this.props.id);
     // check out how I can pass something from one component to another using .navigate!
     this.props.navigate("video detail route", { ytubeId: this.props.id });
@@ -72,7 +72,7 @@ export class YouTubeItem extends React.Component {
 
   render() {
     return (
-      <TouchableWithoutFeedback onPress={this.onPress}>
+      <TouchableWithoutFeedback onPress={this.buttonHandler}>
         <View style={{ paddingTop: 20, alignItems: "center" }}>
           <Image
             style={{ width: "100%", height: 200 }}
